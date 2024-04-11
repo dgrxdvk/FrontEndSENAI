@@ -1,0 +1,72 @@
+/* keyframes= fefine uma animação */
+/* keyframe identifier = se refere ao nome da animação */
+/* as etapas são definidas pelas % porcentagens colocadas no bloco */
+@keyframes mudaCor {
+    0%{
+    color: black;
+    }
+    25%{
+        color: aquamarine;
+    }
+    50%{
+        color: brown;
+    }
+    75%{
+        color: blue;
+    }
+    100%{
+        color: black;
+    }
+}
+
+@keyframes pertubacao {
+    0%{
+        top: 0%;
+        background-image: url(../materialDeAula/imagem1.jpg);
+        
+    }
+    25%{
+        top: 50%;
+        color: blueviolet;
+        background-image: url(../materialDeAula/imagem2.jpg);
+    }
+    50%{
+        top: 0%;
+        right: 0%;
+        color: chartreuse;
+        background-image: url(../materialDeAula/imagem3.jpg);
+    }
+
+    
+}
+
+h1{
+    /* animation name = nome da animação */
+    animation-name: mudaCor;
+    /* animation duration = o quanto que a animação vai demorar */
+    animation-duration: 4s;
+    /*  animation delay = o quanto que animação vai demorar para iniciar */
+    animation-delay: 1s;
+    /* animation iternation count = quantas vezes a anima~]ao irá executar */
+    animation-iteration-count: infinite;
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+
+}
+
+/* animation : name, duração, time, delay */
+#caixa{ 
+    width: 300px;
+    height: 300px;
+    /* position = muda o posicionamento do elemento */
+    /* abolute = fica fora da hierarquia e aceita coordenadas (por, bottom, left. right) */
+    position: absolute;
+    animation-name: pertubacao;
+    animation-duration: 10s;
+    background-color: aqua;
+    animation-iteration-count: infinite;
+
+}
